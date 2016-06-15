@@ -11,6 +11,7 @@
     "watch:css": "onchange 'dev/scss/*.scss' -- npm run build:css",
     "watch:js": "onchange 'dev/js/*.js' -- npm run build:js",
     "serve": "browser-sync start --server --files '*.html, css/*.css, js/*.js' --no-open",
+    "build": "npm-run-all build:*",
     "dev": "npm-run-all --parallel serve watch:*"
   },
   "author": "Julien van der Kluft",
