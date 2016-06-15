@@ -12,7 +12,9 @@
     "watch:js": "onchange 'dev/js/*.js' -- npm run build:js",
     "serve": "browser-sync start --server --files '*.html, css/*.css, js/*.js' --no-open",
     "build": "npm-run-all build:*",
-    "dev": "npm-run-all --parallel serve watch:*"
+    "dev": "npm-run-all --parallel serve watch:*",
+    "clean:soft": "rimraf css/ && rimraf js/",
+    "clean:hard": "rimraf css/ && rimraf js/ && rimraf node_modules/"
   },
   "author": "Julien van der Kluft",
   "license": "ISC",
@@ -25,6 +27,7 @@
     "onchange": "^2.0.0",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.5.1",
+    "rimraf": "^2.5.2",
     "uglify-js": "^2.6.2"
   },
   "dependencies": {
