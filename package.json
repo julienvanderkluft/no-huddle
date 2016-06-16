@@ -4,23 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --output-style compressed -o dist/css dev/scss",
-    "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers '> 5%, ie 10' -r dist/css/*.css",
+    "sass"         : "node-sass --output-style compressed -o dist/css dev/scss",
+    "autoprefixer" : "postcss -u autoprefixer --autoprefixer.browsers '> 5%, ie 10' -r dist/css/*.css",
 
-    "build:tree": "mkdirp dist/js/ dist/css/",
-    "build:css": "npm run sass && npm run autoprefixer",
-    "build:js": "browserify dev/js/main.js | uglifyjs -c -m > dist/js/main.js",
+    "build:tree"   : "mkdirp dist/js/ dist/css/",
+    "build:css"    : "npm run sass && npm run autoprefixer",
+    "build:js"     : "browserify dev/js/main.js | uglifyjs -c -m > dist/js/main.js",
 
-    "watch:css": "onchange 'dev/scss/*.scss' -- npm run build:css",
-    "watch:js": "onchange 'dev/js/*.js' -- npm run build:js",
+    "watch:css"    : "onchange 'dev/scss/*.scss' -- npm run build:css",
+    "watch:js"     : "onchange 'dev/js/*.js' -- npm run build:js",
 
-    "serve": "browser-sync start --server --files '*.html, dist/**' --no-open",
+    "serve"        : "browser-sync start --server --files '*.html, dist/**' --no-open",
 
-    "build": "npm-run-all build:*",
-    "dev": "npm run build && npm-run-all --parallel serve watch:*",
+    "build"        : "npm-run-all build:*",
+    "dev"          : "npm run build && npm-run-all --parallel serve watch:*",
 
-    "clean": "rimraf dist/",
-    "clean:hard": "npm run clean:soft && rimraf node_modules/"
+    "clean"        : "rimraf dist/",
+    "clean:hard"   : "npm run clean:soft && rimraf node_modules/"
   },
   "author": "Julien van der Kluft",
   "license": "ISC",
