@@ -1,7 +1,7 @@
 {
   "name": "no-huddle",
   "version": "0.0.1",
-  "description": "",
+  "description": "Start playing faster !",
   "main": "index.js",
   "scripts": {
     "sass"         : "node-sass --output-style compressed -o dist/css dev/scss",
