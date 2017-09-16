@@ -8,7 +8,15 @@ var WebFont  = require('webfontloader');
 WebFont.load({
   google: {
     families: [ '' ]
-  }
+  },
+  timeout: 2000//,
+
+  // fontactive: function (fontFamily, fontDescription) {
+  //   console.log('webfontloader:success: ' + fontFamily);
+  // },
+  // fontinactive: function (fontFamily, fontDescription) {
+  //   console.log('webfontloader:error: ' + fontFamily);
+  // }
 });
 
 
